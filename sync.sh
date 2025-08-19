@@ -4,9 +4,11 @@
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
 # Copy entire folder recursively and overwrite if exists
-SOURCE_FOLDER="$HOME/.config/ghostty"
-DEST_FOLDER="$SCRIPT_DIR/ghostty"
+GHOSTTY_SOURCE_FOLDER="$HOME/.config/ghostty"
+cp -r "$GHOSTTY_SOURCE_FOLDER" "$SCRIPT_DIR"
+echo "Copied $GHOSTTY_SOURCE_FOLDER to $SCRIPT_DIR"
 
-cp -r "$SOURCE_FOLDER" "$DEST_FOLDER"
-echo "Copied $SOURCE_FOLDER to $DEST_FOLDER"
-
+# nvim config
+NVIM_SOURCE_FOLDER="$HOME/.config/nvim"
+cp -r "$NVIM_SOURCE_FOLDER" "$SCRIPT_DIR"
+echo "Copied $NVIM_SOURCE_FOLDER to $SCRIPT_DIR"
