@@ -15,6 +15,13 @@ return {
          lazy = false,
          priority = 1000,
          config = function()
+             require("tokyonight").setup {
+              transparent = true,
+              styles = {
+                sidebars = "transparent",
+                floats = "transparent",
+              },
+             }
              vim.cmd[[colorscheme tokyonight]]
              vim.cmd('hi Directory guibg=NONE')
              vim.cmd('hi SignColumn guibg=NONE')
@@ -26,10 +33,12 @@ return {
        lazy = false, 
        opts = {
           extra_groups = {
+            "Normal",
             "NormalFloat", -- plugins which have float panel such as Lazy, Mason, LspInfo
             "NvimTreeNormal",
             "TelescopeNormal",
-            "TelescopeBorder"
+            "TelescopeBorder",
+            "LineNr"
           },
        } 
      }
