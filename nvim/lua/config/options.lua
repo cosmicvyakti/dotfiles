@@ -7,12 +7,12 @@
 
 
 -- Basic settings
-vim.o.number = true                              -- Line numbers
+vim.o.number = true                              -- Line numbersoptio
 vim.o.relativenumber = true                      -- Relative line numbers
 vim.o.cursorline = true                          -- Highlight current line
 vim.o.wrap = false                               -- Don't wrap lines
 vim.o.scrolloff = 10                             -- Keep 10 lines above/below cursor 
-vim.opt.sidescrolloff = 8                          -- Keep 8 columns left/right of cursor
+vim.opt.sidescrolloff = 8                        -- Keep 8 columns left/right of cursor
 
 -- Indentation
 vim.o.tabstop = 2                                -- Tab width
@@ -67,7 +67,7 @@ vim.o.autochdir = false                          -- Don't auto change directory
 -- vim.o.path:append("**")                          -- include subdirectories in search
 vim.o.selection = "exclusive"                    -- Selection behavior
 vim.o.mouse = "a"                                -- Enable mouse support
--- vim.o.clipboard:append("unnamedplus")            -- Use system clipboard
+vim.o.clipboard = "unnamedplus"                   -- Use system clipboard
 vim.o.modifiable = true                          -- Allow buffer modifications
 vim.o.encoding = "UTF-8"                         -- Set encoding
 
@@ -77,3 +77,4 @@ vim.o.guicursor = "n-v-c:block,i:ver25-blinkwait700-blinkoff400-blinkon250-Curso
 -- split windows
 vim.o.splitbelow = true
 vim.o.splitright = true
+vim.o.winborder = "rounded"

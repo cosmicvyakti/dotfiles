@@ -7,7 +7,10 @@ return {
     },
     config = function()
       require('telescope').setup {
-        defaults = require('telescope.themes').get_ivy({})
+        defaults = require('telescope.themes').get_ivy({}),
+        extensions = {
+          fzf = {}
+        }
       }
       -- keybinds
       local builtin = require('telescope.builtin')
